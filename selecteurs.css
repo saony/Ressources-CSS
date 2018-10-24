@@ -1,0 +1,29 @@
+/* selecteurs classiques */
+
+	#id{
+
+	}
+
+	.class{
+
+	}
+
+	h1,h2,h3{
+
+	}
+/* sélecteur d'éléments déscendants */
+
+	#navigation li{
+		
+	}
+
+/* pseudo class example = hover sur un lien */
+	
+	.a:hover{ 
+		text-decoration: underline; 
+	}
+
+Règle de Spécificité : Hiérarchie d'application des règles CSS du moins spécifique au plus spécifique 
+
+Règle de nommage des .classes et #id : "nom_de_l'élément-spécificité_stylistique"
+	Exemple: Pour une image arrondie, nommer la classe générique: "img-circle" 

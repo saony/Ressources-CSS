@@ -1,0 +1,62 @@
+/* Lier le html à la feuille de style: dans le head de la page html, ajouter */
+<head> 
+	<link rel="stylesheet" href="style.css">
+</head>
+
+/* Syntaxe basique CSS */
+
+selector{					/* selector est le "CSS selector" */
+
+	property: value;		/* Property est la "style property" */
+	property: value;		
+	property: value;		/* les values sont les "style rules" */
+}
+
+/* Couleurs */
+
+.couleur{
+color:#aaaaaa RGB() RGBA();				/* couleur des textes */
+background-color:#aaaaaa RGB() RGBA();	/* couleur de l'arrière-plan */
+}
+
+/* Polices */
+
+.polices{
+font-family: ;
+font-size: ;
+line-height: ;			/* Par la suite, la valeur définie en line height est reprise pour l'unité "eM" qui est égale à "une hauteur de ligne" */
+font-weight: ;			/* épaisseur du texte */
+letter-spacing: ;
+font-color:;
+text-decoration: ; 		/* soulignement, italique*/
+text-align: ;
+font-style: ;
+text-transform: ;
+}
+
+/* Modèle de boîte : designer les DIV */
+
+.div{
+width: ;						/* largeur */
+height: ;						/* longueur */
+margin: ;						/* marge externe */
+padding: ;						/* marge interne */
+border: 1px dotted red;			/* bordure */
+border-radius: 10 10 10 10;		/* arrondi des angles HG, HD, BD, BG */
+box-shadow: 2px 2px 3px blue; 	/* décalage vers la droite, décalage vers le bas, dimension, couleur*/;
+
+}
+
+/* Unités utilisées pour les dimensions DIV */
+
+.div{
+	width : 50px;				/* unité universelle */
+}
+
+.div{
+	width : 10%;				/* relatif au parent */
+}
+
+.div{
+	width : 2em;				/* relatif à la hauteur de ligne, à utilisé pour une mise à jour harmonieuse des DIV en cas de changement de hauteur de ligne*/
+}

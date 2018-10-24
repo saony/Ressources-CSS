@@ -1,0 +1,170 @@
+/* Positionnement "relatif", "absolu" et "fixe" */
+
+	Le positionnement RELATIF est relatif par rapport à lui même : il se décale par rapport à sa position initiale
+
+	Le positionnement ABSOLU est relatif au plus proche parent ayant une position définie
+
+		Exemple: Considérons un container contenant une div plus petite, la petite div doit se trouver à 10px de l'angle bas droit du container.
+
+		/* HTML */	
+			<div class= "container" >
+				<div class= "small_div" > 
+				</div>
+			</div>
+
+		/* CSS */
+			.container{
+				position:relative;
+			}
+			
+			.small_div{
+				position:absolute;
+				bottom: 10px
+				right:10px;
+			}
+	
+		Le positionnement FIXE permet à un élément de rester inchangé lors du défilement, par exemple une sidebar. 
+		Dans ce cas il faut divisé le contenu de la page en 2: une div "sidebar" et une div "contenu de la page"
+
+			.sidebar{
+				position:fixed;
+				width:20%;
+				top: 0px;
+				bottom: 0px;
+			}
+
+/* Liste des éléments "blocks"
+
+La mise en forme : Par défaut, les éléments de bloc commencent sur des nouvelles lignes.
+Le modèle de contenu : De façon générale, les éléments de bloc peuvent contenir des éléments en ligne et d'autres éléments de bloc.
+
+*/
+
+<address> Information de contact.
+<article> Contenu d'un article.
+<aside> Contenu tangentiel.
+<audio> Lecteur audio.
+<blockquote> Long bloc de citation.
+<canvas> Canevas de dessin.
+<dd> Description d'une définition.
+<div> Division d'un document.
+<dl> Liste de définitions.
+<dt> Définition/description d'un terme.
+<fieldset> Ensemble de champs.
+<figcaption> Légende d'une image.
+<figure> Permet de grouper des média avec une légende (voir <figcaption>).
+<footer> Bas de page ou de section.
+<form> Formulaire.
+<h1>, <h2>, <h3>, <h4>, <h5>, <h6> Éléments de titre de niveau 1 à 6.
+<header> En-tête de page ou de section.
+<hgroup> Information d'en-tête de groupe.
+<hr> Ligne de division horizontale.
+<main> Contient le contenu central unique au document.
+<nav> Contient des liens de navigation.
+<noscript> Contenu à utiliser si les scripts ne fonctionnent pas ou s'ils sont désactivés.
+<ol> Liste ordonnée.
+<output> Résultat d'un formulaire.
+<p> Paragraphe.
+<pre> Texte pré-formaté.
+<section> Section d'une page web.
+<table> Tableau.
+<tfoot> Pied de tableau.
+<ul> Liste non-ordonnée.
+<video> Lecteur vidéo.
+
+/* Liste des éléments "en ligne":
+
+Modèle de contenu : En général, les éléments en ligne ne peuvent contenir que des données ou d'autres éléments en ligne. Il n'est pas possible de placer des éléménts de bloc à l'intérieur d'éléments en ligne.
+Formatage : Par défaut, les éléments en ligne n'introduisent pas de saut de ligne dans le flux du document. En revanche, les éléments de bloc provoquent un saut de ligne (ce comportement peut être modifié grâce au CSS).
+ 
+ */
+
+<a>
+<abbr>
+<acronym>
+<b>
+<bdo>
+<big>
+<br>
+<button>
+<cite>
+<code>
+<dfn>
+<em>
+<i>
+<img>
+<input>
+<kbd>
+<label>
+<map>
+<object>
+<q>
+<samp>
+<script>
+<select>
+<small>
+<span>
+<strong>
+<sub>
+<sup>
+<textarea>
+<time>
+<tt>
+<var>
+
+/* Techniques de flottements */
+
+#container{
+	float:left;
+
+	/* ou */
+
+	float: right;
+}
+
+/* Attention, les éléments lignes ne vont pas à la ligne automatiquement, il faut donc forcer le retour à la ligne grâce à la propriété "clear" */
+#clear{
+	clear:left;
+
+	/* ou */
+
+	clear: right;
+
+	/* ou */
+
+	clear: both;
+}
+
+Exemple:
+
+	<div id="container">
+	  <div id="left"></div>
+	  <div id="right"></div>
+	  <div class="clear"></div>
+	  <div id="footer"></div>
+	</div>
+
+	#container{
+		width:900px;
+		margin: 20px auto;
+		background-color:#F03831;
+	}
+
+	#left{
+		width:38%;
+		float:left;
+	}
+
+	#right{
+		width:60%;
+		float:right;
+	}
+
+	#clear{
+		clear:both;
+	}
+
+	#footer{
+		width:800px;
+		margin: 20px auto;
+	}
